@@ -7,9 +7,9 @@
 feature 'Enter names' do
   scenario 'players enter name and it returns input on the screen' do
     visit('/')
-    fill_in :player_1_name, with: 'Katie'
-    fill_in :player_2_name, with: 'James'
+    fill_in :player_1_name, with: 'James'
+    fill_in :player_2_name, with: 'Josh'
     click_button 'Submit'
-    expect(page).to have_content 'Katie vs. James'
+    expect(page).to have_content "James vs. Josh"
   end
 end
